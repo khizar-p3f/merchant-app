@@ -33,7 +33,7 @@ artifacts:
     - package.json
     - server.js
     - appspec.yml
-    - scripts/*
+    - scripts/**/*
     - node_modules/**/*
     - dist/**/*
     - client/**/*
