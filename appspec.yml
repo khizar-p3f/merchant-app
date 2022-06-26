@@ -1,23 +1,19 @@
 version: 0.0
 os: linux
 files:
+- source: /server
+  destination: /home/ec2-user/express-service/server
 - source: /dist
   destination: /home/ec2-user/express-service/dist
 - source: /config
   destination: /home/ec2-user/express-service/config
-- source: /public
-  destination: /home/ec2-user/express-service/public
-- source: /client
-  destination: /home/ec2-user/express-service/client
-- source: /tests
-  destination: /home/ec2-user/express-service/tests
 - source: /server.js
   destination: /home/ec2-user/express-service
 - source: /package.json
   destination: /home/ec2-user/express-service
 - source: /node_modules
   destination: /home/ec2-user/express-service/node_modules
-- source: /scripts/requirements.txt
+- source: /scripts/
   destination: /home/ec2-user/scripts
 hooks:
   AfterInstall:
