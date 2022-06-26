@@ -1,6 +1,16 @@
 version: 0.0
 os: linux
 files:
+- source: /dist
+  destination: /home/ec2-user/express-service
+- source: /config
+  destination: /home/ec2-user/express-service
+- source: /public
+  destination: /home/ec2-user/express-service
+- source: /client
+  destination: /home/ec2-user/express-service
+- source: /tests
+  destination: /home/ec2-user/express-service
 - source: /server.js
   destination: /home/ec2-user/express-service
 - source: /package.json

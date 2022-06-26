@@ -1,0 +1,26 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                "node": "16",
+                "esmodules": "true"
+            }},        
+        ],
+        ["@babel/preset-react",
+            {
+                "runtime": "automatic",
+                "targets": {
+                "esmodules": "true"
+            }}]
+    ],
+    "plugins": [
+        [
+            "@babel/plugin-proposal-object-rest-spread"
+        ],
+        [
+            "@babel/plugin-proposal-class-properties"
+          ]
+    ]
+}

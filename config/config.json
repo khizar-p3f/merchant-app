@@ -1,0 +1,9 @@
+{
+    "port":3000,
+    "firebase":true,
+    "config":"production",
+    "mongodb":{
+        "username":"admin",
+        "database":"admin"
+    }
+}

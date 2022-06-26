@@ -7,6 +7,7 @@ phases:
     commands:
       # Install dependencies needed for running tests
       - npm install
+      - npm run build
 
       # Upgrade AWS CLI to the latest version
       - pip3 install --upgrade awscli
@@ -34,4 +35,9 @@ artifacts:
     - appspec.yml
     - scripts/*
     - node_modules/**/*
+    - dist/**/*
+    - client/**/*
+    - config/*
+    - public/*
+    - tests/*
     - template-configuration.json
