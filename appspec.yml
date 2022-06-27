@@ -1,8 +1,26 @@
 version: 0.0
 os: linux
 files:
-- source: /
+- source: /server.js
   destination: /home/ec2-user/express-service
+- source: /appspec.yml
+  destination: /home/ec2-user/express-service
+- source: /buildspec.yml
+  destination: /home/ec2-user/express-service
+- source: /.babelrc
+  destination: /home/ec2-user/express-service
+- source: /package.json
+  destination: /home/ec2-user/express-service
+- source: /node_modules
+  destination: /home/ec2-user/express-service/node_modules
+- source: /server
+  destination: /home/ec2-user/express-service/server 
+- source: /dist
+  destination: /home/ec2-user/express-service/dist 
+- source: /config
+  destination: /home/ec2-user/express-service/config 
+- source: /scripts/requirements.txt
+  destination: /home/ec2-user/scripts
 hooks:
   AfterInstall:
   - location: scripts/install_python3
