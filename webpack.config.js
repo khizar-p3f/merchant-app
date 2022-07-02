@@ -45,7 +45,7 @@ module.exports = {
             options: {
               lessOptions: {
                 modifyVars: {
-                  '@ant-theme-file': "; @import '" + path.resolve(__dirname, './client/theme/index.less',) + "'",
+                  '@ant-theme-file': "; @import '" + path.resolve(__dirname, './client/dashboard/theme/index.less',) + "'",
                 },
                 javascriptEnabled: true
               },

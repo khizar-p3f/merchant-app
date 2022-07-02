@@ -7,9 +7,9 @@ const { Sider } = Layout;
 const MainSidebar = (props) => {
     
     return (
-        <Sider id='main-sidebar' breakpoint="sm" collapsedWidth="110" width={250}  trigger={null} collapsible collapsed={props.collapsed}>
+        <Sider theme='dark' id='main-sidebar' breakpoint="sm" collapsedWidth="110" width={250}  trigger={null} collapsible collapsed={props.collapsed}>
         <Menu
-            theme="light"
+            theme="dark"
             mode="inline"
             defaultSelectedKeys={['1']}
             items={[

@@ -96,3 +96,15 @@ advisories for dependencies used within your application.
 
 Best Practices: https://docs.aws.amazon.com/codestar/latest/userguide/best-practices.html?icmpid=docs_acs_rm_sec
 
+AWS Code Deploy Error
+--------------------------
+
+I made it work like this:
+
+I had a couple of failed deployments for various reasons. The thing is that CD keeps in the EC2 instance and in the path /opt/codedeploy-agent/deployment-root/​ a folder named by the ID of the failed deployment [a very long alphanumeric sting] . Delete this folder and create a new deployment [from the aws UI console] and redeploy the application. This way the appspec.yml file that is in the wrong place will be deleted. It should now succeed.
+
+Extra Notice:
+
+CD does not rewrite files [that have not been created by it's specific deployment] CodeDeploy does not deploy in a folder that there is already code[files] as it does not want to interfere with different CD deployments and/or other CI/CD tools [like Jenkins]. It only deploys in a path that has already deploy code with the specific deployment.
+
+You can empty the folder where your deployment want to happen and redeploy your code via CD.

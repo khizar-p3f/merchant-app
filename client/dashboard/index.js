@@ -3,14 +3,14 @@ import React, { useState } from 'react';
 import MainHeader from './components/mainheader';
 import MainSidebar from './components/mainsidebar';
 import { Router } from '@reach/router'
-import IndexPage from './pages';
 import AboutPage from './pages/about';
-
+import 'antd/lib/style/themes/default.less';
+import 'antd/dist/antd.less';
 import './theme/app.less'
 import { useDispatch, useSelector } from 'react-redux';
-import UsersList from './pages/users';
-import PageBuilder from './pages/builder';
+import UsersList from './pages/users'; 
 
+ 
 
 const App = () => {
     const [collapsed, setCollapsed] = useState(false);
@@ -28,7 +28,6 @@ const App = () => {
                         <UsersList path="/home"  />
                         <UsersList path="/users"  />
                         <AboutPage path="/about-us" />
-                        <PageBuilder path="/builder" />
                     </Router>                   
                 </Layout>
             </Layout>
